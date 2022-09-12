@@ -1,0 +1,266 @@
+nav {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, $primary 0%, $primary 50%, $secondary 50%, $secondary 100%) 1;
+}
+
+.login-icon{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.coding-home-logo {
+  width: 170px;
+  height: 42px;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  background-image: url(../images/logo.svg);
+
+}
+
+.banner {
+  background-image: url(../images/bg_home.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text-gradient {
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(#09acf5, #62db54);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.square {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.primary-bottom-line {
+  width: 50px;
+  height: 3px;
+  background-color: $primary;
+}
+
+.white-bottom-line {
+  width: 50px;
+  height: 3px;
+  background-color: white;
+}
+
+.code-list {
+  overflow-x:scroll;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.card {
+  border-radius: 12px;
+  border: none;
+  .teacher-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.card-hover:hover {
+  border: 1px solid $primary;
+}
+.icon {
+  vertical-align: bottom;
+}
+
+.btn-gradient {
+  background: linear-gradient(104deg, #09acf5, #62db54);
+  &:hover {
+    color: white;
+    opacity: 0.9;
+  }
+}
+
+.feature-bg {
+  height: 615px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &-cover {
+    opacity: 0.6;
+    background-color: black;
+    &:hover{
+      opacity: 0;
+    }
+  }
+  &-1 {
+    background-image: url(../images/info01.jpg);
+  }
+  &-2 {
+    background-image: url(../images/info02.jpg);
+  }
+  &-3 {
+    background-image: url(../images/info03.jpg);
+  }
+  &-4 {
+    background-image: url(../images/info04.jpg);
+  }
+}
+
+
+.squareRounded {
+  display: none;
+  width: 32px;
+  height: 32px;
+  &-topLeft {
+    border-top: 2px solid $primary;
+    border-left: 2px solid $primary;
+    border-top-left-radius: 10px;
+  }
+  &-topRight {
+    border-top: 2px solid $primary;
+    border-right: 2px solid $primary;
+    border-top-right-radius: 10px;
+  }
+  &-bottomLeft {
+    border-bottom: 2px solid $primary;
+    border-left: 2px solid $primary;
+    border-bottom-left-radius: 10px;
+  }
+  &-bottomRight {
+    border-bottom: 2px solid $primary;
+    border-right: 2px solid $primary;
+    border-bottom-right-radius: 10px;
+  }
+}
+.card:hover {
+  .squareRounded {
+    display: block;
+  }
+}
+
+.bg-share {
+  background-image: url(../images/bg_share.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper {
+  width: 100%;
+  height: 429px;
+  @media (max-width:991px) {
+    height: auto;
+  }
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 60%;
+    height: 90%;
+    border-radius: 24px;
+    
+    // 偽元素線框
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $light-dark;
+      border-radius: 24px;
+      left: -10px;
+      top: 10px;
+      z-index: -1;
+      @media (max-width:991px) {
+        left: -5px;
+        top: 5px;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+    @media (max-width:991px) {
+      position: relative;
+      width: calc(100% - 5px);
+      height: 213px;
+      left: 5px;
+      margin-bottom: 40px;
+    }
+  }
+  .student-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+    border-radius: 24px 24px 24px 0;
+    &-img {
+      position: absolute;
+      bottom: 100%;
+      right: 32px;
+      width: 100px;
+      height: 100px;
+      transform: translateY(50%);
+      @media (max-width:991px) {
+        width: 80px;
+        height: 80px;
+        right: 24px;
+        top: -30px;
+        bottom: auto;
+        transform: none;
+      }
+    }
+    @media (max-width:991px) {
+      position: relative;
+      width: 100%;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &-arrow-next, &-arrow-prev {
+    position: unset;
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    color: #62DB54;
+  }
+
+  .swiper-pagination {
+    position: unset;
+    width: auto;
+    .swiper-pagination-bullet {
+      background-color: $primary;
+      opacity: 0.5;
+      &-active {
+        width: 16px;
+        border-radius: 100px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    z-index: 1;
+    transform: translateX(-50%);
+    @media (max-width: 991px) {
+      position: initial;
+      transform: none;
+    }
+  }
+}
+
+.join-us{
+  border-radius: 24px;
+}
+
+.book-icon{
+  font-size: 100px;
+  vertical-align: top;
+  line-height: 1;
+}

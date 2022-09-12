@@ -1,0 +1,11 @@
+.select-bar {
+  overflow-x: scroll;
+  &-item {
+    border-radius: 8px;
+    &:hover {
+      color: $primary;
+      border: 1px solid $primary;
+      background: none;
+    }
+  }
+}
