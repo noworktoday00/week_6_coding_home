@@ -1,10 +1,75 @@
----
-title: Class
-layout: ./app/layout.ejs
-engine: ejs
-current: Class
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Class</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/icons?selected=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
 
+  <body class="bg-black">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark pb-0 sticky-top">
+      <div class="container d-flex justify-content-between">
+        <h1 class="mb-6">
+          <a class="coding-home-logo" href="./index.html">Coding Home</a>
+        </h1>
+        <button
+          class="navbar-toggler mb-6"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="material-icons-outlined icon text-primary">menu</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item text-center">
+              <a class="nav-link py-3 fs-18 text-white" href="./index.html"
+                >首頁</a
+              >
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link py-3 fs-18 text-white" href="./class.html"
+                >課程介紹</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link w-100 py-3 fs-18 d-flex justify-content-center"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                <span class="material-icons me-1 icon">account_circle</span>
+                <p class="text-white mb-0">登入</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+    </nav>
+    
 <!-- select bar -->
 <section class="bg-dark">
   <div class="container py-10">
@@ -176,3 +241,99 @@ current: Class
     </div>
   </div>
 </section>
+
+
+    <footer class="container-fluid bg-dark text-light py-6">
+      <p class="text-center fs-16 mb-0">
+        Coding Home © 2022 All Rights Reserved
+      </p>
+    </footer>
+    <div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-body">
+        <!-- login heaeder -->
+        <div class="row justify-content-end">
+          <h5 class="col modal-title text-end" id="loginModalLabel">登入</h5>
+          <button
+            type="button"
+            class="col btn-close text-end"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <!-- login form -->
+        <div class="row justify-content-center mb-12">
+          <div class="col-8">
+            <form>
+              <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label text-light"
+                  >信箱</label
+                >
+                <input
+                  type="email"
+                  class="form-control bg-dark text-white"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="請輸入信箱"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="exampleInputPassword1" class="form-label"
+                  >密碼</label
+                >
+                <input
+                  type="password"
+                  class="form-control bg-dark text-white"
+                  id="exampleInputPassword1"
+                  placeholder="請輸入密碼"
+                />
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-gradient text-white">
+                  登入
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <p class="text-center mb-4">其他登入方式</p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-outline-light d-block mb-4 px-5">
+                <img
+                  class="login-icon"
+                  src="./assets/images/icon_fb.svg"
+                  alt=""
+                />
+                Facebook 登入
+              </button>
+              <button class="btn btn-outline-light d-block mb-4 px-5">
+                <img
+                  class="login-icon"
+                  src="./assets/images/icon_google.svg"
+                  alt=""
+                />
+                Google 登入
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>
